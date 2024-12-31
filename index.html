@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Vinyl&family=Tiny5&display=swap"
+    rel="stylesheet">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  html{
+    scroll-behavior: smooth;
+}
+</style>
+<body>
+  <!-- header -->
+  <nav id="nav" class="bg-emerald-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <div class="md:text-2xl	text-emerald-800 font-bold text-black ">
+          <img class="inline-block w-10"
+            src="https://cdn3.iconfinder.com/data/icons/data-science-set-01-1/65/20-512.png" alt="logo">
+          <a href="#home" class="font-bold" style="font-family:Philosopher, serif;">AMALDEV</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="sm:hidden">
+          <button id="menuButton" class="text-gray-800 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation links -->
+        <div id="navLinks" class="hidden font-bold sm:flex space-x-10 text-base	">
+          <a href="#home" class=" hover:text-emerald-800 hover:underline">Home</a>
+          <a href="#about" class=" hover:text-emerald-800 hover:underline">About</a>
+          <a href="#skill" class=" hover:text-emerald-800 hover:underline">Skills</a>
+          <a href="#project" class=" hover:text-emerald-800 hover:underline">Projects</a>
+          <a href="#contact" class=" hover:text-emerald-800 hover:underline">Contact</a>
+
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="hidden font-bold sm:hidden">
+        <a href="#home" class="block text-black hover:text-emerald-800 hover:underline px-4 py-2">Home</a>
+        <a href="#about" class="block text-black hover:text-emerald-800 hover:underline px-4 py-2">About</a>
+        <a href="#skill" class="block text-black hover:text-emerald-800 hover:underline px-4 py-2">Skills</a>
+        <a href="#project" class="block text-black hover:text-emerald-800 hover:underline px-4 py-2">Projects</a>
+        <a href="#contact" class="block text-black hover:text-emerald-800 hover:underline px-4 py-2">Contact</a>
+
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const servicesButton = document.getElementById('servicesButton');
+    const servicesDropdown = document.getElementById('servicesDropdown');
+    const mobileServicesButton = document.getElementById('mobileServicesButton');
+    const mobileServicesDropdown = document.getElementById('mobileServicesDropdown');
+
+    // Toggle mobile menu
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Toggle dropdown menu for large screens
+    servicesButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      servicesDropdown.classList.toggle('hidden');
+    });
+
+    // Close dropdown menu if clicking outside
+    document.addEventListener('click', () => {
+      servicesDropdown.classList.add('hidden');
+    });
+
+    // Toggle dropdown menu for mobile
+    mobileServicesButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileServicesDropdown.classList.toggle('hidden');
+    });
+
+    // Close mobile dropdown menu if clicking outside
+    document.addEventListener('click', () => {
+      mobileServicesDropdown.classList.add('hidden');
+    });
+  </script>
+
+  <!-- home section -->
+  <div id="home" class=" bg-emerald-950 text-white bg-cover bg-fixed bg-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8	">
+      <div class="mt-20 md:ml-40 mx-20 md:my-48">
+        <h3 class="text-2xl md:text-4xl text-emerald-300">I'm</h3>
+        <h1 class="text-4xl md:text-6xl">AMALDEV CB</h1>
+        <h2 class="text-2xl md:text-4xl text-emerald-300">MEARN Stack Developer</h2>
+      </div>
+      <div class="flex items-center md:mt-28	">
+        <img src="./homeimage.jpg" alt=" image"
+          class=" rounded-full shadow-md border-4 border-emerald-300 transform transition duration-300 hover:scale-105 hover:shadow-lg md:size-80 md:ml-36 md:mr-20 size-64 ml-16 mb-20">
+      </div>
+    </div>
+  </div>
+  <!-- about section -->
+  <div id="about" class="container mx-auto mt-10">
+    <h1 class="text-2xl font-bold ml-4 md:ml-0 md:text-4xl">About me</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-6">
+      <div class="text-justify">
+        <p class="mx-4 md:mx-0 mb-4">
+          A passionate and detail-oriented web developer with a knack for creating dynamic and
+          user-friendly websites. With a solid foundation in front-end and back-end development, I specialize in
+          building responsive, performance-optimized web applications that deliver seamless user experiences.
+          <br>
+          What drives me is the challenge of transforming ideas into functional and aesthetically pleasing websites. I
+          believe that great web development is not just about writing code, but about solving problems and making the
+          web a more accessible and enjoyable space for users. <br>
+
+          Whether working on small projects or large-scale applications, I’m committed to maintaining high standards of
+          quality, efficiency, and performance. My approach is collaborative, and I enjoy working with clients to bring
+          their vision to life, while also adding my expertise to enhance the overall functionality and design of their
+          projects.
+        </p>
+
+      </div>
+      <div class="ml-20">
+        <div>
+          <h1 class="text-2xl font-bold text-emerald-800 mb-2">Personal Info.</h1>
+          <div class="font-semibold	">
+            <div><i class="fa-solid fa-user"></i> : AMALDEV CB</div>
+            <div><i class="fa-regular fa-calendar-days"></i> : 18/05/2000</div>
+            <div><i class="fa-solid fa-phone"></i> : +91 859 208 3885</div>
+            <div><i class="fa-solid fa-envelope"></i> : amaldev1845@gmail.com</div>
+            <div><i class="fa-brands fa-linkedin"></i> : in/amaldevcb</div>
+
+          </div>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold text-emerald-800 mb-2 mt-4">Education</h1>
+          <div class="font-semibold	">
+            <div class="mb-2">2021 : Bsc.Computer Science : SN College Cherthala</div>
+            <div class="mb-2">2018 : 12th Standard : ABVHSS Muhamma</div>
+            <div>2016 : 10th Standard : ABVHSS Muhamma</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- skill section -->
+  <div id="skill" class="container mx-auto mt-20 mb-10">
+    <h1 class="text-2xl font-bold ml-4 md:ml-0 md:text-4xl">My Skills</h1>
+    <div class="bg-emerald-950 mt-8 text-white grid grid-cols-2 md:grid-cols-3 pt-8">
+      <div class="mx-10 md:ml-20 mb-8 w-20 md:w-40 text-center">
+        <img
+          class="border rounded-full border-4 border-emerald-300 transform transition duration-300 hover:scale-105 hover:shadow-lg"
+          src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="image">
+        <h1 class="font-bold">HTML</h1>
+      </div>
+      <div class="mx-10 md:ml-20 mb-8 w-20 md:w-40 text-center">
+        <img
+          class="border rounded-full border-4 border-emerald-300 transform transition duration-300 hover:scale-105 hover:shadow-lg"
+          src="https://armortechs.com/upload/image/blog/css-variables-css-3-logo.png" alt="image">
+        <h1 class="font-bold">CSS</h1>
+      </div>
+      <div class="mx-10 md:ml-20 mb-8 w-20 md:w-40 text-center">
+        <img
+          class="border rounded-full border-4 border-emerald-300 transform transition duration-300 hover:scale-105 hover:shadow-lg"
+          src="https://logodix.com/logo/374972.png" alt="image">
+        <h1 class="font-bold">JavaScript</h1>
+      </div>
+      <div class="mx-10 md:ml-20 mb-8 w-20 md:w-40 text-center">
+        <img
+          class="border rounded-full border-4 border-emerald-300 transform transition duration-300 hover:scale-105 hover:shadow-lg"
+          src="https://www.scottbrady91.com/img/logos/tailwind.png" alt="image">
+        <h1 class="font-bold">HTML</h1>
+      </div>
+      <div class="mx-10 md:ml-20 mb-8 w-20 md:w-40 text-center">
+        <img
+          class="border rounded-full border-4 border-emerald-300 transform transition duration-300 hover:scale-105 hover:shadow-lg"
+          src="https://brandlogos.net/wp-content/uploads/2021/09/bootstrap-logo.png" alt="image">
+        <h1 class="font-bold">CSS</h1>
+      </div>
+      <div class="mx-10 md:ml-20 mb-8 w-20 md:w-40 text-center">
+        <img
+          class="border rounded-full border-4 border-emerald-300 transform transition duration-300 hover:scale-105 hover:shadow-lg"
+          src="https://th.bing.com/th/id/OIP.sxD42SYTwoJhoSAU2HckCgHaHa?w=1080&h=1080&rs=1&pid=ImgDetMain" alt="image">
+        <h1 class="font-bold">JavaScript</h1>
+      </div>
+    </div>
+  </div>
+  <!-- project section -->
+  <div id="project" class="mx-16 mt-20">
+    <h1 class="text-2xl font-bold ml-4 md:ml-14 md:text-4xl">Projects</h1>
+    <div class="grid grid-cols-1 md:mx-4  md:grid-cols-4 gap-x-8 mt-10">
+      <div class="bg-emerald-950 p-6 md:w-64 mb-10 text-center transform transition duration-300 hover:scale-105">
+        <img src="./vajrami.png" class="border border-emerald-300 border-2 mb-6" alt="image">
+        <h1 class="text-2xl text-emerald-300 font-semibold mb-4">Event Manage Website</h1>
+        <div class="my-4">
+          <a class="text-md font-medium	text-emerald-950 hover:text-emerald-100"
+            href="https://vajrami-event-management.vercel.app/">
+            <button class="bg-emerald-300 rounded rounded-lg px-4 hover:bg-emerald-700">Live link</button>
+          </a>
+        </div>
+        <a class="text-md font-medium	 text-emerald-950 hover:text-emerald-100" href="https://github.com/AmaldevCB/Vajramii">
+          <button class="bg-emerald-300 rounded rounded-lg px-4 hover:bg-emerald-700">Git hub</button>
+        </a>
+      </div>
+      <div class="bg-emerald-950 p-6 md:w-64 mb-10 text-center transform transition duration-300 hover:scale-105">
+        <img src="./sogno.png" class="border border-emerald-300 border-2 mb-6" alt="image">
+        <h1 class="text-2xl text-emerald-300 font-semibold mb-4">Clothing Brand Webpage</h1>
+        <div class="my-4">
+          <a class="text-md font-medium	text-emerald-950 hover:text-emerald-100"
+            href="https://sogno-website.vercel.app/">
+            <button class="bg-emerald-300 rounded rounded-lg px-4 hover:bg-emerald-700">Live link</button>
+          </a>
+        </div>
+        <a class="text-md font-medium	 text-emerald-950 hover:text-emerald-100"
+          href="https://github.com/AmaldevCB/sogno">
+          <button class="bg-emerald-300 rounded rounded-lg px-4 hover:bg-emerald-700">Git hub</button>
+        </a>
+      </div>
+      <div class="bg-emerald-950 p-6 md:w-64 mb-10 text-center transform transition duration-300 hover:scale-105">
+        <img src="./salala.png" class="border border-emerald-300 border-2 mb-6" alt="image">
+        <h1 class="text-2xl text-emerald-300 font-semibold mb-4">Mobile store Website</h1>
+        <div class="my-4">
+          <a class="text-md font-medium	text-emerald-950 hover:text-emerald-100"
+            href="https://salala-mobiles.vercel.app/">
+            <button class="bg-emerald-300 rounded rounded-lg px-4 hover:bg-emerald-700">Live link</button>
+          </a>
+        </div>
+        <a class="text-md font-medium	 text-emerald-950 hover:text-emerald-100"
+          href="https://github.com/AmaldevCB/salalaMobiles">
+          <button class="bg-emerald-300 rounded rounded-lg px-4 hover:bg-emerald-700">Git hub</button>
+        </a>
+      </div>
+      <div class="bg-emerald-950 p-6 md:w-64 mb-10 text-center transform transition duration-300 hover:scale-105">
+        <img src="./eduon.png" class="border border-emerald-300 border-2 mb-6" alt="image">
+        <h1 class="text-2xl text-emerald-300 font-semibold mb-4">Edu Platform Webpage</h1>
+        <div class="my-4">
+          <a class="text-md font-medium	text-emerald-950 hover:text-emerald-100" href="https://edu-on-wvm4.vercel.app/">
+            <button class="bg-emerald-300 rounded rounded-lg px-4 hover:bg-emerald-700">Live link</button>
+          </a>
+        </div>
+        <a class="text-md font-medium	 text-emerald-950 hover:text-emerald-100"
+          href="https://github.com/AmaldevCB/Edu_On">
+          <button class="bg-emerald-300 rounded rounded-lg px-4 hover:bg-emerald-700">Git hub</button>
+        </a>
+      </div>
+
+
+    </div>
+
+  </div>
+  <!-- contact section -->
+  <div id="contact" class="container mx-auto mb-10 mt-20">
+    <h1 class="text-2xl font-bold ml-4 md:ml-0 md:text-4xl">Contact</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-10 ">
+      <div class=" md:ml-0 ml-8">
+        <h2 class="text-2xl font-semibold">Connect me at...</h2>
+        <div class="text-5xl mt-10 mb-8 text-emerald-950">
+          <a class="mr-12 hover:text-emerald-300" href="https://m.facebook.com/amaldev.amal.50746/"><i class="fa-brands fa-square-facebook"></i></a>
+          <a class="mr-12 hover:text-emerald-300" href="https://www.instagram.com/amaldev_biju/"><i class="fa-brands fa-square-instagram"></i></a>
+          <a class="hover:text-emerald-300" href="https://x.com/amal_amaldev45"><i class="fa-brands fa-square-x-twitter"></i></a>
+        </div>
+        <div class="text-5xl text-emerald-950">
+          <a class="mx-12 hover:text-emerald-300" href="https://www.linkedin.com/in/amaldevcb/"><i class="fa-brands fa-linkedin"></i></a>
+          <a class="mr-12 hover:text-emerald-300" href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+          <a class=" hover:text-emerald-300" href="https://github.com/AmaldevCB"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div>
+          <img class="w-80 md:ml-10" src="https://img.freepik.com/premium-vector/people-with-gadgets-illustration-cartoon-woman-character-sitting-table-smiling-chatting-with-friend-white_109722-1596.jpg?w=360" alt="">
+        </div>
+      </div>
+      <div class="">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-6">
+            <h2 class="text-2xl font-semibold">Reach out...</h2>
+            <p class="text-md mt-2">I would love to hear from you! Please reach out with any inquiries.</p>
+          </div>
+          <div class="bg-gray-50 p-8 border border-4 border-emerald-950 rounded-lg shadow-lg">
+            <form action="#" method="POST">
+              <div class="grid grid-cols-2 gap-6">
+                <!-- Name Field -->
+                <div class="">
+                  <label for="name" class="block text-md font-medium">Full Name</label>
+                  <input type="text" id="name" name="name" required class="mt-2 p-3 h-12 w-full border border-emerald-950 border-2 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <!-- Email Field -->
+                <div>
+                  <label for="email" class="block text-md font-medium">Email Address</label>
+                  <input type="email" id="email" name="email" required class="mt-2 p-3 h-12 w-full border border-emerald-950 border-2 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+              </div>
+    
+              <!-- Message Field -->
+              <div class="mt-4">
+                <label for="message" class="block text-md font-medium">Message</label>
+                <textarea id="message" name="message" rows="6" required class="mt-2 p-3 h-20 w-full border border-emerald-950 border-2 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+              </div>
+    
+              <!-- Submit Button -->
+              <div class="mt-4 text-center">
+                <a href="#home"><button class="bg-emerald-950 text-white hover:text-emerald-950 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-300 ">Send Message</button></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer section -->
+  <footer class="bg-emerald-950 text-white py-8">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <!-- Logo and Description -->
+      <div class="text-center md:text-left">
+        <h2 class="text-xl font-bold">AMALDEV CB</h2>
+        <p class="text-sm text-gray-400 mt-2">
+          MEARN Stack developer.
+        </p>
+      </div>
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="text-gray-400 hover:text-emerald-300">Home</a></li>
+          <li><a href="#about" class="text-gray-400 hover:text-emerald-300">About</a></li>
+          <li><a href="#skill" class="text-gray-400 hover:text-emerald-300">Skills</a></li>
+          <li><a href="#project" class="text-gray-400 hover:text-emerald-300">Projects</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-emerald-300">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Social Media Icons -->
+      <div class="flex space-x-4 text-3xl">
+        <a href="https://m.facebook.com/amaldev.amal.50746/" class="text-gray-400 hover:text-emerald-300">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="https://github.com/AmaldevCB" class=" text-gray-400 hover:text-emerald-300">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/amaldevcb/"class="text-gray-400 hover:text-emerald-300">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+    <div class="text-center container mx-auto text-gray-500 mt-8 text-sm">
+      <hr class="mb-4">
+      © 2024 My Portfolio. All rights reserved.
+    </div>
+  </footer>
+  
+</body>
+
+</html>
